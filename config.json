@@ -10,7 +10,7 @@
   "text": {
     "more": "Este grafo representa las conexiones entre marcas y conceptos culturales identificados dentro del Observatorio Ético del Branding. La visualización permite explorar los nodos, sus relaciones y las comunidades que conforman la red.",
     "intro": "Grafo interactivo que muestra las relaciones culturales entre marcas y conceptos presentes en el Observatorio Ético del Branding.",
-    "title": "Grafo cutural del Observatorio Ético del Branding"
+    "title": "Grafo cultural del Observatorio Ético del Branding"
   },
   "legend": {
     "edgeLabel": "Relación cultiural",
