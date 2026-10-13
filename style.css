@@ -545,6 +545,12 @@ canvas#sigma_bg_1 {
   display: flex;
   gap: 4px;
   padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #zoom .z {
@@ -585,19 +591,6 @@ canvas#sigma_bg_1 {
   content: "⌖";
   font: 30px/1 Arial, sans-serif;
   color: #5d4777;
-}
-
-@media screen and (max-width: 600px) {
-  #zoom {
-    left: auto;
-    right: 10px;
-    bottom: 10px;
-  }
-
-  #zoom .z {
-    width: 42px;
-    height: 42px;
-  }
 }
 
 .line {
@@ -689,5 +682,13 @@ canvas#sigma_bg_1 {
     width: 42px;
     height: 42px;
   }
-}
 
+  #zoom .z[rel="in"]::before,
+  #zoom .z[rel="out"]::before {
+    font-size: 28px;
+  }
+
+  #zoom .z[rel="center"]::before {
+    font-size: 26px;
+  }
+}
