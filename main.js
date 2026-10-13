@@ -274,16 +274,31 @@ function configSigmaElements(config) {
     $GP.bg = $(sigInst._core.domElements.bg);
     $GP.bg2 = $(sigInst._core.domElements.bg2);
 
-    var a = [], b, x = 1;
+    var a = [], b;
 
-    for (b in sigInst.clusters) {
-        a.push(
-            '<div style="line-height:12px"><a href="#' + b +
-            '"><div style="width:40px;height:12px;border:1px solid #fff;background:' +
-            b + ';display:inline-block"></div> Comunidad ' + (x++) +
-            ' (' + sigInst.clusters[b].length + ' nodos)</a></div>'
-        );
-    }
+var nombresComunidades = {
+    "rgb(0,174,225)": "Aspiración, éxito y movilidad social",
+    "rgb(84,125,198)": "Creatividad, identidad y moda urbana",
+    "rgb(0,144,106)": "Consumo, tradición y vínculos emocionales",
+    "rgb(224,85,188)": "Experiencia, bienestar y naturaleza",
+    "rgb(53,167,0)": "Consumo masivo y vida cotidiana",
+    "rgb(169,120,0)": "Tecnología, conocimiento y poder informacional",
+    "rgb(243,73,68)": "Innovación, identidad y transformación social"
+};
+
+for (b in sigInst.clusters) {
+    var nombreComunidad = nombresComunidades[b] || "Comunidad por clasificar";
+
+    a.push(
+        '<div style="line-height:16px;margin-bottom:8px">' +
+        '<a href="#' + b + '">' +
+        '<span style="display:inline-block;width:14px;height:14px;' +
+        'border-radius:50%;border:1px solid #fff;background:' + b +
+        ';margin-right:7px;vertical-align:middle"></span>' +
+        nombreComunidad +
+        ' (' + sigInst.clusters[b].length + ' nodos)</a></div>'
+    );
+}
 
     $GP.cluster.content(a.join(""));
 
