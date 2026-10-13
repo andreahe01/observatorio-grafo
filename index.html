@@ -28,10 +28,83 @@
   <script src="jquery.fancybox.pack.js" type="text/javascript"></script>
   <script src="main.js" type="text/javascript"></script>
 
-  <!-- Estilos -->
+  <!-- Estilos existentes -->
   <link rel="stylesheet" type="text/css" href="jquery.fancybox.css" />
   <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
   <link rel="stylesheet" media="screen and (max-height: 770px)" href="tablet.css" />
+
+  <!-- Estilos de la leyenda temática -->
+  <style>
+    #community-legend {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #dedede;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    #community-legend h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    #community-legend .legend-intro {
+      margin: 0 0 12px;
+      font-size: 11px;
+      line-height: 1.5;
+      color: #666;
+    }
+
+    #community-legend .community-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 310px;
+      overflow-y: auto;
+      padding: 2px 5px 2px 0;
+    }
+
+    #community-legend .community-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    #community-legend .community-color {
+      flex: 0 0 12px;
+      width: 12px;
+      height: 12px;
+      margin-top: 2px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    #community-legend .community-name {
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    #community-legend .community-description {
+      display: block;
+      color: #666;
+    }
+
+    #community-legend .legend-note {
+      margin: 12px 0 0;
+      padding: 9px;
+      background: #f3f1f6;
+      border-left: 3px solid #5d4777;
+      font-size: 10px;
+      line-height: 1.5;
+      color: #49404f;
+    }
+  </style>
 </head>
 
 <body>
@@ -61,12 +134,10 @@
         </dl>
       </div>
 
-      <!-- Leyenda -->
+      <!-- Leyenda general -->
       <div id="legend">
-
         <div class="box">
-
-          <h2>Leyenda:</h2>
+          <h2>Leyenda</h2>
 
           <dl>
             <dt class="node"></dt>
@@ -79,17 +150,135 @@
             <dd></dd>
           </dl>
 
-        </div>
+          <!-- Leyenda temática permanente -->
+          <div id="community-legend">
 
+            <h3>Comunidades culturales</h3>
+
+            <p class="legend-intro">
+              Cada color identifica una comunidad de marcas y conceptos
+              relacionados dentro de la red.
+            </p>
+
+            <div class="community-list">
+
+              <div class="community-item">
+                <span class="community-color"
+                      style="background:#00AEE1"></span>
+                <div>
+                  <span class="community-name">
+                    Aspiración, éxito y movilidad social
+                  </span>
+                  <span class="community-description">
+                    Nike, Liverpool y conceptos relacionados con rendimiento,
+                    superación personal, prestigio y movilidad social.
+                  </span>
+                </div>
+              </div>
+
+              <div class="community-item">
+                <span class="community-color"
+                      style="background:#547DC6"></span>
+                <div>
+                  <span class="community-name">
+                    Creatividad, identidad y moda urbana
+                  </span>
+                  <span class="community-description">
+                    adidas y conceptos de creatividad, autenticidad,
+                    diversidad, moda urbana y fast fashion.
+                  </span>
+                </div>
+              </div>
+
+              <div class="community-item">
+                <span class="community-color"
+                      style="background:#00906A"></span>
+                <div>
+                  <span class="community-name">
+                    Consumo, tradición y vínculos emocionales
+                  </span>
+                  <span class="community-description">
+                    Coca-Cola y asociaciones con celebración, felicidad,
+                    nostalgia, unión y salud pública.
+                  </span>
+                </div>
+              </div>
+
+              <div class="community-item">
+                <span class="community-color"
+                      style="background:#E055BC"></span>
+                <div>
+                  <span class="community-name">
+                    Experiencia, bienestar y naturaleza
+                  </span>
+                  <span class="community-description">
+                    Corona y conceptos de experiencia, ocio, libertad,
+                    naturaleza, mexicanidad y tensiones socioambientales.
+                  </span>
+                </div>
+              </div>
+
+              <div class="community-item">
+                <span class="community-color"
+                      style="background:#35A700"></span>
+                <div>
+                  <span class="community-name">
+                    Consumo masivo y vida cotidiana
+                  </span>
+                  <span class="community-description">
+                    Walmart y McDonald's, vinculados con accesibilidad,
+                    conveniencia, familia, globalización y salud pública.
+                  </span>
+                </div>
+              </div>
+
+              <div class="community-item">
+                <span class="community-color"
+                      style="background:#A97800"></span>
+                <div>
+                  <span class="community-name">
+                    Tecnología, conocimiento y poder informacional
+                  </span>
+                  <span class="community-description">
+                    Google y conceptos de información, aprendizaje,
+                    conectividad, vigilancia digital y monopolio.
+                  </span>
+                </div>
+              </div>
+
+              <div class="community-item">
+                <span class="community-color"
+                      style="background:#F34944"></span>
+                <div>
+                  <span class="community-name">
+                    Innovación, identidad y transformación social
+                  </span>
+                  <span class="community-description">
+                    Apple, Starbucks y conceptos de innovación, diseño,
+                    individualidad, personalización, comunidad y bienestar.
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="legend-note">
+              <strong>Nota metodológica:</strong> las comunidades se
+              identifican mediante agrupaciones de nodos de la red. Sus
+              nombres son interpretaciones temáticas para facilitar la
+              exploración. Los colores no representan niveles de riesgo
+              ni constituyen una evaluación ética de las marcas.
+            </p>
+
+          </div>
+        </div>
       </div>
 
       <!-- Búsqueda y filtros -->
       <div class="b1">
-
         <form>
 
           <div id="search" class="cf">
-
             <h2>Buscar:</h2>
 
             <input
@@ -102,45 +291,37 @@
 
             <div class="state"></div>
             <div class="results"></div>
-
           </div>
 
           <div class="cf" id="attributeselect">
-
-            <h2>Filtrar por grupo:</h2>
+            <h2>Filtrar por comunidad:</h2>
 
             <div class="select">
-              Seleccionar grupo
+              Seleccionar comunidad
             </div>
 
             <div class="list cf"></div>
-
           </div>
 
         </form>
-
       </div>
 
     </div>
 
     <!-- Información general -->
-    <div id="information">
-    </div>
+    <div id="information"></div>
 
   </div>
 
   <!-- Controles de zoom -->
   <div id="zoom">
-
     <div class="z" rel="in"></div>
     <div class="z" rel="out"></div>
     <div class="z" rel="center"></div>
-
   </div>
 
   <!-- Licencia -->
   <div id="copyright">
-
     <a
       rel="license"
       href="http://creativecommons.org/licenses/by-nc-sa/3.0/"
@@ -152,20 +333,16 @@
         src="CC.png"
       />
     </a>
-
   </div>
 
   <!-- Panel de información de cada nodo -->
   <div id="attributepane">
-
     <div class="text">
 
       <div title="Cerrar" class="left-close returntext">
-
         <div class="c cf">
           <span>Volver a la red completa</span>
         </div>
-
       </div>
 
       <div class="headertext">
@@ -173,9 +350,7 @@
       </div>
 
       <div class="nodeattributes">
-
         <div class="name"></div>
-
         <div class="data"></div>
 
         <div class="p">
@@ -183,21 +358,13 @@
         </div>
 
         <div class="link">
-          <ul>
-          </ul>
+          <ul></ul>
         </div>
-
       </div>
 
     </div>
-
   </div>
 
 </body>
 </html>
 
-</script>
-
-</body>
-
-</html>
