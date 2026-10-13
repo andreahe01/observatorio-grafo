@@ -542,45 +542,62 @@ canvas#sigma_bg_1 {
   position: fixed;
   left: 45%;
   bottom: 25px;
-  margin: 0 auto;
+  display: flex;
+  gap: 4px;
   padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align: left;
 }
 
 #zoom .z {
-  background: #fff;
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid #ccc;
-  float: left;
-  margin-right: 4px;
-  background-repeat: no-repeat;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#zoom .z[rel="center"] {
-  background-image: url('./images/zoom_reset.png');
-  background-position: center;
-  background-repeat: no-repeat;
+#zoom .z:hover {
+  background: #f3f1f6;
+  border-color: #5d4777;
 }
 
-#zoom .z[rel="in"] {
-  background-image: url('./images/zoom_in.png');
-  background-position: center;
-  background-repeat: no-repeat;
+/* Acercar */
+#zoom .z[rel="in"]::before {
+  content: "+";
+  font: 32px/1 Arial, sans-serif;
+  color: #5d4777;
 }
 
-#zoom .z[rel="out"] {
-  background-image: url('./images/zoom_out.png');
-  background-position: center;
-  background-repeat: no-repeat;
+/* Alejar */
+#zoom .z[rel="out"]::before {
+  content: "−";
+  font: 32px/1 Arial, sans-serif;
+  color: #5d4777;
+}
+
+/* Centrar */
+#zoom .z[rel="center"]::before {
+  content: "⌖";
+  font: 30px/1 Arial, sans-serif;
+  color: #5d4777;
+}
+
+@media screen and (max-width: 600px) {
+  #zoom {
+    left: auto;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  #zoom .z {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 .line {
