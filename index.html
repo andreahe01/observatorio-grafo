@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xml:lang="es"
       lang="es"
+      xml:lang="es"
       xmlns:og="http://opengraphprotocol.org/schema/"
       xmlns:fb="http://www.facebook.com/2008/fbml"
       itemscope
@@ -11,8 +11,8 @@
 <head>
   <title>Grafo cultural del Observatorio Ético del Branding</title>
 
+  <meta charset="UTF-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
@@ -34,9 +34,9 @@
   <link rel="stylesheet" media="screen and (max-height: 770px)" href="tablet.css" />
 
   <!-- Estilos de la leyenda temática -->
-  <style>
+  <style type="text/css">
     #community-legend {
-      margin-top: 14px;
+      margin-top: 16px;
       padding-top: 12px;
       border-top: 1px solid #dedede;
       color: #333;
@@ -61,7 +61,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-height: 310px;
+      max-height: 300px;
       overflow-y: auto;
       padding: 2px 5px 2px 0;
     }
@@ -75,6 +75,7 @@
     }
 
     #community-legend .community-color {
+      display: inline-block;
       flex: 0 0 12px;
       width: 12px;
       height: 12px;
@@ -104,6 +105,12 @@
       line-height: 1.5;
       color: #49404f;
     }
+
+    @media screen and (max-width: 600px) {
+      #community-legend .community-list {
+        max-height: 250px;
+      }
+    }
   </style>
 </head>
 
@@ -116,13 +123,13 @@
 
   <!-- Panel principal -->
   <div id="mainpanel">
-
     <div class="col">
 
       <div id="maintitle"></div>
       <div id="title"></div>
       <div id="titletext"></div>
 
+      <!-- Información adicional -->
       <div class="info cf">
         <dl>
           <dt class="moreinformation"></dt>
@@ -137,7 +144,8 @@
       <!-- Leyenda general -->
       <div id="legend">
         <div class="box">
-          <h2>Leyenda</h2>
+
+          <h2>Leyenda:</h2>
 
           <dl>
             <dt class="node"></dt>
@@ -170,8 +178,8 @@
                     Aspiración, éxito y movilidad social
                   </span>
                   <span class="community-description">
-                    Nike, Liverpool y conceptos relacionados con rendimiento,
-                    superación personal, prestigio y movilidad social.
+                    Nike, Liverpool y conceptos de rendimiento, superación
+                    personal, prestigio y movilidad social.
                   </span>
                 </div>
               </div>
@@ -226,7 +234,7 @@
                     Consumo masivo y vida cotidiana
                   </span>
                   <span class="community-description">
-                    Walmart y McDonald's, vinculados con accesibilidad,
+                    Walmart y McDonald's, junto con accesibilidad,
                     conveniencia, familia, globalización y salud pública.
                   </span>
                 </div>
@@ -255,7 +263,7 @@
                   </span>
                   <span class="community-description">
                     Apple, Starbucks y conceptos de innovación, diseño,
-                    individualidad, personalización, comunidad y bienestar.
+                    individualidad, personalización y comunidad.
                   </span>
                 </div>
               </div>
@@ -263,11 +271,10 @@
             </div>
 
             <p class="legend-note">
-              <strong>Nota metodológica:</strong> las comunidades se
-              identifican mediante agrupaciones de nodos de la red. Sus
-              nombres son interpretaciones temáticas para facilitar la
-              exploración. Los colores no representan niveles de riesgo
-              ni constituyen una evaluación ética de las marcas.
+              <strong>Nota metodológica:</strong> los nombres son
+              interpretaciones temáticas de las comunidades de la red.
+              Los colores identifican agrupaciones de nodos; no representan
+              niveles de riesgo ni evaluaciones éticas de las marcas.
             </p>
 
           </div>
@@ -310,7 +317,6 @@
 
     <!-- Información general -->
     <div id="information"></div>
-
   </div>
 
   <!-- Controles de zoom -->
